@@ -1,0 +1,31 @@
+
+
+.centrar {
+    display: inline;
+    align-items: center;
+}
+
+mat-card-title, p {
+    color: chocolate;
+}
+
+img {
+    width: 600px;
+    height: 600px;
+    margin:auto;
+    display:block;
+}
+
+.example-card {
+    justify-content: center !important;
+}
+
+a,button {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+
+a:hover {
+    background-color: blue;
+}

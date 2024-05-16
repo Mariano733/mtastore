@@ -1,0 +1,42 @@
+<div class="contaniner">
+    <div class="posicion">
+        <h1>Bienvenido a nuestra tienda virtual</h1>
+        <h2>Nosotros tenemos los mejores productos</h2>
+    </div>
+    <img class="img1" src="assets/image.jpg" alt="Nuestra tienda" title="Nuestra tienda">
+
+    <div class="container center">
+        En MTA store nos caracterizamos por contar con una gran variedad de artículos a precio de chollo en 
+        categorías como: moda, joyas y electrónica. Y si no encuentras lo que estabas buscando, ¡no te preocupes! 
+        No lo pides y te lo encontramos en un tiempo record. con el envío totalmente gratuito. Además de la tienda
+        tienes a tu disposición una gran cadena de establecimientos físicos abiertos en muchas más provincias de España.
+        Enviamos todos nuestros productos a cualquier lugar y parte del mundo, solamente dinos donde lo quieres y te 
+        entregaremos los artículos que fabricamos donde tú nos digas.
+    </div>
+    
+    <h3 class="posicion">
+        Nuestras instalaciones
+    </h3>
+    
+    <div class="contanier">
+        <div class="enLiniea"><img class="img2" src="assets/1.jpg" alt="MTA store" title="MTA store"></div>
+        <div class="enLiniea"><img class="img2" src="assets/2.jpg" alt="MTA store" title="MTA store"></div>
+        <div class="enLiniea"><img class="img2" src="assets/4.jpg" alt="MTA store" title="MTA store"></div>
+        <div class="enLiniea"><img class="img2" src="assets/5.jpg" alt="MTA store" title="MTA store"></div>
+        <div class="enLiniea"><img class="img2" src="assets/6.jpg" alt="MTA store" title="MTA store"></div>
+    </div>
+
+    <h3 class="posicion">
+        Muestra de productos
+    </h3>
+    @defer () {
+        <app-produ-carrusel />
+    }
+    @loading {
+        <mat-spinner/>
+    }
+    @placeholder {
+        <mat-spinner/>
+    }
+    <!-- <mat-spinner [diameter]="30"/> -->
+</div>

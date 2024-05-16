@@ -1,0 +1,54 @@
+.contaniner{
+    display: grid;
+    justify-items: center;
+}
+
+.posicion {
+    margin-top: 60px;
+}
+
+.img1 {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    border: 2px solid yellow;
+    border-radius: 25px;
+    
+}
+
+.img2 {
+    width: 280px;
+    height: 250px;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.enLiniea {
+    display: inline;
+    float: left;
+    padding: 20px 10px;
+    width: 310px;
+    height: 310px;
+    border: 2px solid yellow;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+.img2:hover {
+    transform: scale(1.05);
+}
+
+
+p {
+    color: white;
+    text-align: center;
+}
+
+.center {
+    padding: 50px;
+    width: 1000px;
+    height: auto;
+    text-align: justify;
+    margin-top: -200px;
+    border: 2px solid yellow;
+}

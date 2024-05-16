@@ -1,0 +1,91 @@
+<div class="container">
+    <h2 mat-dialog-title>{{ operacion }} usuario</h2>
+    @if(loading) {
+        <mat-spinner [diameter]="30"></mat-spinner>
+    }
+</div>
+
+<form [formGroup]="form" (submit)="addEditPersona()">
+    <mat-dialog-content>
+
+        <div class="row">
+            <div class="column">
+                <mat-form-field appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="nombre" placeholder="Ingrese nombre">
+                </mat-form-field>
+                <div class="error">
+                    @if(form.get('nombre')?.hasError('required') && form.get('nombre')?.touched){<span>El nombre es requerido</span>}
+                    @if(form.get('nombre')?.hasError('maxlength')){<span>El nombre no puede tener más de 20 caracteres</span>}    
+                </div>
+            </div>
+
+            <div class="column">
+                <mat-form-field appearance="fill">
+                    <mat-label>Apellido</mat-label>
+                    <input matInput formControlName="apellido" placeholder="Ingrese el apellido">
+                </mat-form-field>
+                <div class="error">
+                    @if(form.get('apellido')?.hasError('required') && form.get('apellido')?.touched){<span>El apellido es requerido</span>}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <mat-form-field appearance="fill">
+                    <mat-label>Correo</mat-label>
+                    <input matInput formControlName="correo" placeholder="Ingrese el Correo">
+                </mat-form-field>
+                <div class="error">
+                    @if(form.get('correo')?.hasError('required') && form.get('correo')?.touched){<span>El correo es requerido</span>}
+                    @if(form.get('correo')?.hasError('email') && form.get('correo')?.touched){<span>El corrreo es <strong>inválido</strong>
+                    </span>}
+                </div>
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="column">
+                <mat-form-field appearance="fill">
+                    <mat-label>Tipo documento</mat-label>
+                    <mat-select formControlName="tipoDocumento">
+                        @for (item of tipoDocumento ; track item.id) {
+                            <mat-option value="{{ item }}"> {{ item }}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="column">
+                <mat-form-field appearance="fill">
+                    <mat-label>Documento</mat-label>
+                    <input matInput formControlName="documento" placeholder="Ingrese el documento">
+                </mat-form-field>
+                <div class="error">
+                @if(form.get('documento')?.hasError('required') && form.get('documento')?.touched){<span>El documento es requerido</span>}
+                @if(form.get('documento')?.hasError('pattern')){<span>Documento sólo son números</span>}
+            </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <mat-form-field appearance="fill">
+                    <mat-label>Fecha de nacimiento</mat-label>
+                    <input [max]="maxDate" formControlName="fechaNacimiento" matInput [matDatepicker]="picker" >
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #picker></mat-datepicker>
+                </mat-form-field>
+                <div class="error">
+                    @if(form.get('fechaNacimiento')?.hasError('required') && form.get('fechaNacimiento')?.touched){<span>La Fecha de nacimiento es <strong>requerida</strong></span>}
+                </div>
+            </div>
+        </div>
+
+    </mat-dialog-content>
+</form>
+<mat-dialog-actions align="end">
+    <button (click)="cancelar()" class="btn btn-primary" type="button" mat-button >Cancelar</button>
+    <button [disabled]="form.invalid" class="btn btn-primary" type="submit" (click)="addEditPersona()" mat-button>Aceptar</button>
+</mat-dialog-actions>

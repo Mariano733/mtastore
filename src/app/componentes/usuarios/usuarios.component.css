@@ -1,0 +1,27 @@
+table {
+    width: 100%;
+}
+
+.sombra {
+    height: 450px;
+    background-color: white;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 90%;
+    margin-right: 10px;
+ }
+
+ mat-icon {
+    cursor: pointer;
+ }
+
+ .btnEdit {
+   color:#376DCD;
+ }
+
+ .btnDelete {
+    color: #B0304B;
+ }
+

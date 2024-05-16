@@ -1,0 +1,98 @@
+.contanier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+}
+
+.contanier1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.enLinea {
+    justify-content: center;
+    padding: 20px 10px;
+    width: 650px;
+    height: 500px;
+    border: 2px solid yellow;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+@keyframes cuadrado{
+    0%{
+        opacity: 0.2;
+    }
+    25%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 0.6;
+    }
+    75%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.opaco {
+    animation: cuadrado 2s linear 1s infinite alternate;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 300px;
+}
+
+.centrar2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: -55px;
+}
+
+.enLinea2 {
+    padding: 20px 10px;
+    width: auto;
+    height: auto;
+    border: 2px solid yellow;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 110px;
+}
+
+.direc {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top: 20px;
+    display: block;
+}
+
+.ifra {
+    margin-top: -100px;
+    border: 2px solid yellow !important;
+    border-radius: 25px;
+    width: 650px;
+    height: 500px;
+}
+
