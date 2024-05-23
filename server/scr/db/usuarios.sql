@@ -1,7 +1,7 @@
 -- MySQL dump 10.13  Distrib 8.0.33, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: usuarios
--- ------------------------------------------------------
+-- -------------------------------------------------------
 -- Server version	8.0.33
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -31,7 +31,7 @@ CREATE TABLE `usuarios` (
   `documento` int DEFAULT NULL,
   `fechaNacimiento` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Mariano','Touchard','marianoandu@gmail.com','DNI',52845854,'1973-06-20'),(2,'Loli','Pérez','loli@gmail.com','Dni',43,'1995-07-15');
+INSERT INTO `usuarios` VALUES (1,'Mariano','Touchard','marianoandu@gmail.com','DNI',52845854,'1973-06-20'),(2,'Lolis','Pérez','loli@gmail.com','Dni',43545612,'1995-07-07'),(7,'Lucías','Andújar','lu@lu.es','DNI',12341582,'2004-05-11'),(10,'Jaime','Tomás','jf@gmail.com','DNI ',23432251,'1954-07-29'),(11,'Juan','Andújar','jm7@gmail.com','DNI ',23432425,'2024-04-04'),(12,'Marisefa','Moya','mf@gmail.com','DNI ',32432474,'1955-09-15'),(14,'José','López','sdfg@sdaf','DNI',12585228,'2024-04-23'),(15,'Carlos','Cano','car@gmail.com','DNI',43545874,'2024-04-24');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-19 10:28:21
+-- Dump completed on 2024-05-23 10:19:42
